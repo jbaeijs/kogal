@@ -1033,13 +1033,15 @@ ul#model-feats {
           transform: translate(50%, 50%); } }
 
 .contact {
-  overflow-x: hidden;
   padding-top: 1rem;
-  padding-bottom: 4rem; }
+  padding-bottom: 4rem; 
+  text-align: center;
+  margin-bottom: 25%;
+}
   .contact h2 {
     margin-bottom: 1.25rem; }
   .contact .section-description {
-    margin: 1rem auto 3rem auto; }
+    margin: 1rem auto auto auto; }
 
 .contact-form input {
   border-radius: 0px;
@@ -1128,17 +1130,21 @@ ul#model-feats {
   color: #ffcb8d; }
 
 .contact-form .row {
-  padding: 0.25rem 0; 
+  padding: 0.25rem 0;
+}
+
+#contact_row {
+  text-align: center;
 }
 
 .footer {
   font-family: mainFont, sans-serif;
-  color: #c4ae78 !important;
+  color: #ffffff !important;
   padding-top: 4rem;
   padding-bottom: 2rem; }
   .footer a {
     transition: all 0.33s;
-    color: #c4ae78 !important;
+    color: #ffffff !important;
     text-decoration: none; }
     @media (min-width: 768px) {
       .footer a {
@@ -1147,7 +1153,7 @@ ul#model-feats {
       .footer a {
         font-size: 100%; } }
     .footer a:hover, .footer a:active {
-      text-shadow: 0 0 15px #99774c, 0px -5px 20px #a17e51, 0 5px 20px #96744a;
+      text-shadow: 0 0 15px #ffffff, 0px -5px 20px #ffffff, 0 5px 20px #ffffff;
       color: #ffffff !important; }
   .footer .footer-nav {
     text-align: center;
@@ -1178,7 +1184,7 @@ ul#model-feats {
     letter-spacing: 0.2rem;
     text-align: center;
     margin-top: 1.75rem;
-    color: #734a32;
+    color: #ffffff;
     font-size: 140%; }
 
 .youtube-player {
@@ -1337,13 +1343,21 @@ ul#model-feats {
   color: #303030;
 }
 
-.btn_contact {
-  width: 33%;
-  transition: transform .2s;
+#cf {
+  position:relative;
+  margin:40px auto;
 }
 
-.btn_contact:hover {
-  background-image: url(../img/btn_contact_parteniariat_after.png);
-  transform: scale(1.1);
+#cf img {
+  position:absolute;
+  left:0;
+  width: 100%;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
+#cf img.top:hover {
+  opacity:0;
+}
