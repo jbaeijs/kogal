@@ -10,22 +10,6 @@ $(document).ready(function() {
     $(this).carousel('next');
     });
 
-    //////////////////////////////////////
-    //          SNIPPETS                //
-    //////////////////////////////////////
-    $(function() {
-    $('a[href^="#"]').on('click',function (e) {
-    e.preventDefault();
-
-        var target = this.hash;
-        var $target = $(target);
-
-    $('html, body').stop().animate({
-        'scrollTop': $target.offset().top
-    }, 900, 'swing');
-    });
-    });
-
     /////////////////////////////////////
     //      MODAL WINDOW GALLERY       //
     /////////////////////////////////////
@@ -114,26 +98,26 @@ $(document).ready(function() {
     /////////////////////////////////////
     //   CHANGE CLASSES RESPONSIVE     //
     /////////////////////////////////////  
-$(window).resize(function(){
-var width = $(window).width();
-if(width >= 300 && width <= 1024){
-    $('.item-1, .item-2, .item-3').removeClass('col-sm-3 col-xs-5').addClass('col-sm-5 col-xs-12');
-    $('.features-item').removeClass('col-md-3').addClass('col-md-6');
-    $('.item-3').removeClass('col-sm-offset-1').addClass('col-sm-offset-3');
-    $('.item-2').removeClass('col-xs-offset-2').addClass('col-xs-offset-0');       
-}
-else{
-    $('.item-1, .item-2, .item-3').removeClass('col-sm-5 col-xs-12').addClass('col-sm-3 col-xs-5');
-    $('.features-item').removeClass('col-md-6').addClass('col-md-3');
-    $('.item-3').removeClass('col-sm-offset-3').addClass('col-sm-offset-1');
-    $('.item-2').removeClass('col-xs-offset-0').addClass('col-xs-offset-2');        
-}
-})
-.resize();//trigger the resize event on page load.
+    $(window).resize(function(){
+    var width = $(window).width();
+    if(width >= 300 && width <= 1024){
+        $('.item-1, .item-2, .item-3').removeClass('col-sm-3 col-xs-5').addClass('col-sm-5 col-xs-12');
+        $('.features-item').removeClass('col-md-3').addClass('col-md-6');
+        $('.item-3').removeClass('col-sm-offset-1').addClass('col-sm-offset-3');
+        $('.item-2').removeClass('col-xs-offset-2').addClass('col-xs-offset-0');       
+    }
+    else{
+        $('.item-1, .item-2, .item-3').removeClass('col-sm-5 col-xs-12').addClass('col-sm-3 col-xs-5');
+        $('.features-item').removeClass('col-md-6').addClass('col-md-3');
+        $('.item-3').removeClass('col-sm-offset-3').addClass('col-sm-offset-1');
+        $('.item-2').removeClass('col-xs-offset-0').addClass('col-xs-offset-2');        
+    }
+    })
+    .resize();//trigger the resize event on page load.
 
     /////////////////////////////////////
     //        STOP PINCH ZOOM          //
     /////////////////////////////////////  
-document.addEventListener('gesturestart', function (e) {
-    e.preventDefault();
-});
+    document.addEventListener('gesturestart', function (e) {
+        e.preventDefault();
+    });
